@@ -1,13 +1,25 @@
 ---
-layout: post
+layout: minima
 title: About
 permalink: /about/
 comments: true
 ---
 
 ## As a conversation Starter
+Some Videogames I play:
+-Roblox
+-Fortnite
 
-Here are some places I have lived.
+Some Animes I Watch:
+-One piece
+-Solo Leveling
+-Dragon Ball
+-Jujutsu Kaisen
+
+My Two Favorite Quotes:
+"I can accept failure, everyone fails at something. But I can't accept not trying"- Micheal Jordan and "If you do the work, you get rewarded. There are no shortcuts in life."- Micheal Jordan
+
+## Here are some places I have lived.
 
 <comment>
 Flags are made using Wikipedia images
@@ -32,6 +44,16 @@ Flags are made using Wikipedia images
     }
     .grid-item p {
         margin: 5px 0; /* Add some margin for spacing */
+    }
+
+    /* Food image styling for the favorite foods grid */
+    .food-img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 8px;
     }
 
     .image-gallery {
@@ -61,9 +83,6 @@ Flags are made using Wikipedia images
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "b/b9/Flag_of_Oregon.svg", "greeting": "Hi", "description": "Oregon - 9 years"},
-        {"flag": "b/be/Flag_of_England.svg", "greeting": "Alright mate", "description": "England - 2 years"},
-        {"flag": "e/ef/Flag_of_Hawaii.svg", "greeting": "Aloha", "description": "Hawaii - 2 years"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -97,42 +116,116 @@ Flags are made using Wikipedia images
     }
 </script>
 
+## Here are my favorite foods
+
+<div class="grid-container2" id="grid_food">
+    <!-- favorite food items will be added here by JavaScript -->
+</div>
+
+<script>
+// Populate the Favorite Foods grid separately from the flags grid
+(function(){
+    const container = document.getElementById('grid_food');
+    if (!container) return; // nothing to do if placeholder missing
+
+    // Apply styles (grid layout is also defined in the top CSS, this reinforces it)
+    container.style.border = '2px dashed';
+    container.style.padding = '10px';
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+    container.style.gap = '10px';
+
+    // Clear existing children to avoid duplicates when reloading
+    container.innerHTML = '';
+
+         // Example favorite foods with optional image paths (replace with your actual favorites and image files)
+         const foods = [
+             {name: 'Pizza', img: 'a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'},
+             {name: 'Sushi', img: '1/1c/Colorful_sushi_lunch.jpg'},
+             {name: 'Burgers', img: 'f/ff/In-N-Out_Burger_cheeseburgers_and_fries.jpg'},
+             {name: 'Ice Cream', img: '6/6f/An_ice_cream_cone_at_a_Ben_%26_Jerry%27s_shop_in_Montreal.jpg'},
+             {name: 'Ramen', img: '5/56/Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg'},
+         ];
+
+         foods.forEach(food => {
+                 const item = document.createElement('div');
+                 item.className = 'grid-item';
+                 item.style.padding = '12px';
+                 item.style.textAlign = 'center';
+                 item.style.borderRadius = '8px';
+                 item.style.border = '1px solid';
+
+                 // Image spot (if the file exists it will show; otherwise you'll see a broken image or can replace with a placeholder)
+                 const img = document.createElement('img');
+                 img.className = 'food-img';
+                 img.src = food.img;
+                 img.alt = food.name;
+                 item.appendChild(img);
+
+                 // Caption / name
+                 const caption = document.createElement('p');
+                 caption.textContent = food.name;
+                 item.appendChild(caption);
+
+                 container.appendChild(item);
+         });
+})();
+</script>
+</script>
+
+<!-- Favorite TV Shows grid -->
+Favorite TV Shows
+<div class="grid-container" id="shows_grid">
+    <!-- Favorite shows will be added here by JavaScript -->
+</div>
+
+<script>
+    // Base path for local images (place your images in /images/fav_shows/)
+    var site_base = "{{ site.baseurl | default: '' }}";
+    var shows_http_source = (site_base && site_base !== '')
+        ? (site_base.replace(//$/, '') + '/images/fav_shows/')
+        : './images/fav_shows/';
+    var favorite_shows = [
+        {"img": "3/34/One_piece_logo_1.svg", "title": "One-Piece"},
+        {"img": "9/9b/Dragon_Ball_Z_Logo.png", "title": "DragonBall-Z"},
+        {"img": "f/f4/Solo_Leveling_logo.svg", "title": "Solo-Leveling"},
+        {"img": "6/6a/Jujutsu_Kaisen_logo_in_Japan.png", "title": "Jujutsu-Kaisen"}
+    ];
+
+    var showsContainer = document.getElementById("shows_grid");
+    for (const show of favorite_shows) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = shows_http_source + encodeURIComponent(show.img);
+        img.alt = show.title;
+        var p = document.createElement("p");
+        p.textContent = show.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        showsContainer.appendChild(item);
+    }
+</script>
 ### Journey through Life
 
 Here is what I did at those places
 
-- 🏫 Lots of Elementary Schools in Tucson, LA, Honolulu, and Glendale (CA)
-- 🏫 Middle and High School in Glendale (CA), Hoover High graduated '77
-- 🎓 Glendale CA Community College, UCLA Extension, LA Wilshire Computer Tech School '77 to '79
-- ⛪ England, London Missionary for Church of Jesus Christ of Latter-day Saints '79 to '81
-- 💼 Culver City, Glendale CA founder at Ashton-Tate, original PC's dBase 2 and 3 '82 to '87
-- 🎓 Eugene Oregon Undergraduate CompSci Degree at University of Oregon (Go Ducks!) '89 to '91
-- 💼 Eugene Oregon, founder and owner @ Microniche `88, Point Control CAD CAM developer '91 to '96
-- 🏢 San Diego CA Qualcomm, Satellite Comm and 1st Mobile OS (BREW) '96 to '19
-- 👨‍🏫 San Diego CA Teacher of Computer Science @ Del Norte High School San Diego '19 to present
+-I was born here in California in 2010 and stayed here my whole life
+-🏫 I went to Hiltop Elementary school in 2015 since they had a preschool there and stayed until 2022
+-🏫 I moved over here to 4s Ranch and went to Oak Valley Middle School in 2022, graduated in 2024
+-👨‍🏫 I then came to Del Norte High School in 2024 and ever since then the story continues until I graduate in 2028
 
 ### Culture, Family, and Fun
 
-Everything for me, as for many others, revolves around family and faith.
-
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
-- The gallery of pics has some of my family, fun, culture and faith memories.
+I am super close with my family especially my mom.
+My family has definitely a big inspiration in my life and encourages me to better myself everyday.
+I love spending time with my family and go on vacations with them.
 
 <comment>
-Gallery of Pics, scroll to the right for more ...
+Gallery of Pics:
 </comment>
 <div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
+<img src="aydend456/student/images/tokyo-tower.jpg" alt="Image 1">
+<img src="aydend456/student/images/my-mom-and-I.jpg" alt="Image 2">
+<img src="aydend456/student/images/ayden.jpg" alt="Image 3">
 </div>
