@@ -1,5 +1,5 @@
 ---
-layout: minima
+layout: post
 title: About
 permalink: /about/
 comments: true
@@ -10,16 +10,103 @@ Some Videogames I play:
 -Roblox
 -Fortnite
 
+
 Some Animes I Watch:
 -One piece
 -Solo Leveling
 -Dragon Ball
 -Jujutsu Kaisen
 
+
 My Two Favorite Quotes:
 "I can accept failure, everyone fails at something. But I can't accept not trying"- Micheal Jordan and "If you do the work, you get rewarded. There are no shortcuts in life."- Micheal Jordan
 
-## Here are some places I have lived.
+
+
+
+<!-- Favorite TV Shows grid -->
+<h2>Favorite TV Shows</h2>
+<div class="grid-container" id="shows_grid">
+    <!-- Favorite shows will be added here by JavaScript -->
+</div>
+
+<script>
+    var favorite_shows = [
+       {
+           "img": "https://github.com/user-attachments/assets/8625173e-e284-4404-87d3-0eacb82db560",
+           "title": "One Piece"
+       },
+       {
+           "img": "https://github.com/user-attachments/assets/85a21dd9-14ae-4f12-b938-3771861017a2",
+           "title": "Solo Leveling"
+       },
+       {
+           "img": "https://github.com/user-attachments/assets/8ea92f68-d954-4d4d-a9b3-6e031b5d304b",
+           "title": "Jujutsu Kaisen"
+       }
+   ];
+
+    var showsContainer = document.getElementById("shows_grid");
+    for (const show of favorite_shows) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = show.img;
+        img.alt = show.title;
+        var p = document.createElement("p");
+        p.textContent = show.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        showsContainer.appendChild(item);
+    }
+</script>
+
+
+
+<!-- Favorite Food grid -->
+<h2>Favorite Food</h2>
+<div class="grid-container" id="games_grid">
+    <!-- Favorite games will be added here by JavaScript -->
+</div>
+
+<script>
+    var favorite_games = [
+        {
+           "img": "https://github.com/user-attachments/assets/29ae37a8-21c8-41ea-bf92-8f0239ecba4d",
+           "title": "Pizza"
+       },
+       {
+           "img": "https://github.com/user-attachments/assets/1ee42fbe-2bcb-4df9-bbb9-acd162dc2687",
+           "title": "Sushi"
+       },
+       {
+           "img": "https://github.com/user-attachments/assets/b5b48b96-ee17-41a5-aa03-aee1b00338f7",
+           "title": "Burgers"
+       },
+       {
+           "img": "https://github.com/user-attachments/assets/c2c6d2ae-89db-41f8-9c3b-42a95d915596",
+           "title": "Ramen"
+       }
+   ];
+
+
+    var gamesContainer = document.getElementById("games_grid");
+    for (const game of favorite_games) {
+        var item = document.createElement("div");
+        item.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = game.img;
+        img.alt = game.title;
+        var p = document.createElement("p");
+        p.textContent = game.title;
+        item.appendChild(img);
+        item.appendChild(p);
+        gamesContainer.appendChild(item);
+    }
+</script>
+
+
+Here are some places I have lived
 
 <comment>
 Flags are made using Wikipedia images
@@ -46,16 +133,6 @@ Flags are made using Wikipedia images
         margin: 5px 0; /* Add some margin for spacing */
     }
 
-    /* Food image styling for the favorite foods grid */
-    .food-img {
-        width: 100%;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 4px;
-        display: block;
-        margin-bottom: 8px;
-    }
-
     .image-gallery {
         display: flex;
         flex-wrap: nowrap;
@@ -65,8 +142,7 @@ Flags are made using Wikipedia images
 
     .image-gallery img {
         max-height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
+        object-fit: cover;        border-radius: 5px;
     }
 </style>
 
@@ -82,7 +158,8 @@ Flags are made using Wikipedia images
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - For my whole life"},
+
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -116,69 +193,13 @@ Flags are made using Wikipedia images
     }
 </script>
 
-## Here are my favorite foods
-
-<div class="grid-container2" id="grid_food">
-    <!-- favorite food items will be added here by JavaScript -->
-</div>
-
-<script>
-// Populate the Favorite Foods grid separately from the flags grid
-(function(){
-    const container = document.getElementById('grid_food');
-    if (!container) return; // nothing to do if placeholder missing
-
-    // Apply styles (grid layout is also defined in the top CSS, this reinforces it)
-    container.style.border = '2px dashed';
-    container.style.padding = '10px';
-    container.style.display = 'grid';
-    container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
-    container.style.gap = '10px';
-
-    // Clear existing children to avoid duplicates when reloading
-    container.innerHTML = '';
-
-         // Example favorite foods with optional image paths (replace with your actual favorites and image files)
-         const foods = [
-             {name: 'Pizza', img: 'a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg'},
-             {name: 'Sushi', img: '1/1c/Colorful_sushi_lunch.jpg'},
-             {name: 'Burgers', img: 'f/ff/In-N-Out_Burger_cheeseburgers_and_fries.jpg'},
-             {name: 'Ice Cream', img: '6/6f/An_ice_cream_cone_at_a_Ben_%26_Jerry%27s_shop_in_Montreal.jpg'},
-             {name: 'Ramen', img: '5/56/Soy_Milk_Ramen_and_Tonkotsu_Miso_Ramen_by_Goemon_Ramen_Bar.jpg'},
-         ];
-
-         foods.forEach(food => {
-                 const item = document.createElement('div');
-                 item.className = 'grid-item';
-                 item.style.padding = '12px';
-                 item.style.textAlign = 'center';
-                 item.style.borderRadius = '8px';
-                 item.style.border = '1px solid';
-
-                 // Image spot (if the file exists it will show; otherwise you'll see a broken image or can replace with a placeholder)
-                 const img = document.createElement('img');
-                 img.className = 'food-img';
-                 img.src = food.img;
-                 img.alt = food.name;
-                 item.appendChild(img);
-
-                 // Caption / name
-                 const caption = document.createElement('p');
-                 caption.textContent = food.name;
-                 item.appendChild(caption);
-
-                 container.appendChild(item);
-         });
-})();
-</script>
-
 ### Journey through Life
 
 Here is what I did at those places
 
 -I was born here in California in 2010 and stayed here my whole life
 -🏫 I went to Hiltop Elementary school in 2015 since they had a preschool there and stayed until 2022
--🏫 I moved over here to 4s Ranch and went to Oak Valley Middle School in 2022, graduated in 2024
+-🏫 I moved over here to 4S Ranch and went to Oak Valley Middle School in 2022, graduated in 2024
 -👨‍🏫 I then came to Del Norte High School in 2024 and ever since then the story continues until I graduate in 2028
 
 ### Culture, Family, and Fun
