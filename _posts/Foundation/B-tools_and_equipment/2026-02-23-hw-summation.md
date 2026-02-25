@@ -1,7 +1,7 @@
 ---
 toc: Title
 layout: post
-title: Hw Submission Blog
+title: Hw Summation Blog
 description: These are all the homeworks I have completed.
 author: Ayden Dudley
 ---
