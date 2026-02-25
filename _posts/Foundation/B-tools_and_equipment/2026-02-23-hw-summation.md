@@ -10,7 +10,7 @@ From these homeworks, I was able to learn about different ways to code using Jav
 <h2>Homeworks</h2>
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Arrays/2026-01-07-arrays.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/arrays" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Arrays
         </div>
@@ -20,7 +20,7 @@ Short explanation: to store lists of data
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Data_Abstractions/2026-01-09-data_abstraction.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/dataabstraction" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Data Abstraction
         </div>
@@ -30,7 +30,7 @@ Short explanation: to store lists of data
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Iteration/2026-01-13-iterations_lesson.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/2026/01/12/iteration-homework_IPYNB_2_.html" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Iteration
         </div>
@@ -40,7 +40,7 @@ Short explanation: to loop through data.
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/JSON/2026-01-16-json_lesson.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/json" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            JSON
         </div>
@@ -50,7 +50,7 @@ Short explanation: to organize information.
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Booleans/2026-01-20-booleans-lessons.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/booleans" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Booleans
         </div>
@@ -60,7 +60,7 @@ Short explanation: true/false values
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Nested_Conditionals/2026-1-14-Nested-Conditionals.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/nested-conditionals" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Nested Conditionals
         </div>
@@ -70,7 +70,7 @@ Short explanation: to make decisions
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Mathematic_Expressions/2026-01-20-math-exp.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/math" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Mathematical Expressions
         </div>
@@ -80,7 +80,7 @@ Short explanation: to calculate values.
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Strings/2026-01-27-Strings-homework.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/2026/01/27/Strings-homework_IPYNB_2_.html" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Strings
         </div>
@@ -90,7 +90,7 @@ Short explantation: to store and work with text, like names or messages, and we 
 
 
 - <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Classes%26Methods/2026-1-27-ClassesAndMethods-Lesson.ipynb" style="text-decoration: none;">
+    <a href="https://aydend456.github.io/Portfolio/js/classes" style="text-decoration: none;">
         <div style="background-color: #0066ffff; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
            Classes & Methods
         </div>
