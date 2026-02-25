@@ -7,15 +7,15 @@ comments: true
 
 ## As a conversation Starter
 Some Videogames I play:
--Roblox
--Fortnite
+- Roblox
+- Fortnite
 
 
 Some Animes I Watch:
--One piece
--Solo Leveling
--Dragon Ball
--Jujutsu Kaisen
+- One piece
+- Solo Leveling
+- Dragon Ball
+- Jujutsu Kaisen
 
 
 My Two Favorite Quotes:
