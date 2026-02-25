@@ -23,4 +23,4 @@ From these homeworks, I was able to learn about different ways to code using Jav
 
 - (Mathematical Expressions) Short explanation: to calculate values.     https://github.com/aydend456/student/blob/main/_notebooks/Foundation/B-tools_and_equipment/homework/2026-01-20-math-exp.ipynb 
 
-- (Classes & Methods) Short explantation: to create and control objects.
+- (Classes & Methods) Short explantation: to create and control objects.        https://github.com/aydend456/Portfolio/blob/main/_notebooks/JavaScriptLessons/Classes%26Methods/2026-1-27-ClassesAndMethods-Lesson.ipynb 
